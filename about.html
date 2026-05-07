@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -18,31 +21,92 @@
     </nav>
 
     <div class="about">
+        <div class="me">
         <h1>About Me</h1>
-        <h2>Background</h2>
-        <P>Born on april 14, 2007, I graduated senior high at ISUDD and went to try out pharmacy.
-            I got into SLU at baguio to study pharmacy but due to complications I left. So I decided to go back to my roots and
-            enrolled back to UDD to study something I'm passionate about, computers. As a child I was always passionate about computers.
-            But I'm mainly more so on the hardware side, as I love building and even repairing different electronics like Laptops, PC, and even mobile phones
-            Now that I'm here in Universidad De Dagupan, I hope to raise my knowledge on coding so I can end up working for cyber security.
-        </P>
-        <h2>Story</h2>
-        <p>There is a reason on why I chose cybersecurity, it was actually my first choice for most of my life.
-            Being exposed to the internet at a young age made me understand the importance of cybersecurity.
-            I've had quite a long history of dealing with hackers, or bad actors on the internet.
-            And I've always had a deep passion on wanting to prevent such situations from happening again.
-            So choosing cybersecurity was more like an obligation and a fulfillment to the promise I made to my younger self.
-            I hope one day I am able to make the internet a much safer place.
+        <section class="abcontainer">
+        <h2>Photos</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <img id="slide-1" src="./images/about/grade12.png" alt="Graduation">
+                <img id="slide-2" src="./images/about/slu.png" alt="SLU">
+                <img id="slide-3" src="./images/about/udd.png" alt="UDD">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
+        </div>
+        </section>
+        <p>I'm a 19 year old BSIT students who loves to game and draw.
+            I've been on the internet for basically my whole life, experienced
+            both the good and the bad sides of the internet.
+            <br><br>
+            I'm an avid gamer and when I'm not gaming I'm usually drawing or programming.
+            I'm constantly developing my skills in programming, so that I can eventually
+            land a job working for cybersecurity.
+            <br><br>
+            I chose cybersecurity because I've experienced mostly the bad part of the internet.
+            And I would like to protect other people from experiencing hacking, doxxing, ddosing
+            and other malicious actions people do on the internet.
+            <br><br>
         </p>
-        <h2>Goals</h2>
-        <p>A short list of what I would like to achieve in my journey of programming</p>
-        <ul>
-            <li>Create a game</li>
-            <li>Create a antivirus software</li>
-            <li>Create a password manager</li>
-            <li>Learning how to hack into systems</li>
-            <li>Create a AI assistant</li>
-        </ul>
-    </div>
+        </div>
+
+        <div class="skills">
+            <h2>Skills</h2>
+            <div class="card-container">
+
+                <div class="cardgroup">
+                    <div class="cardS">
+                        <div class="frontg">
+                            <h3>Gamer</h3>
+                            <p>Analytical Thinking</p>
+                            <p>Problem Solving</p>
+                            <p>Communication</p>
+                            <p>Teamwork</p>
+                        </div>
+                        <div class="backg">
+                            <p>
+                            As a gamer you tend to think a lot about the deciscions you make, and for that reason I believe I posses the skills written on the front of this card.
+                            I play competitive games such as valorant and csgo and it has taught me how to properly communicate and make critical deciscions in quick action scenarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardgroup">
+                    <div class="cardS">
+                        <div class="frontg">
+                            <h3>Artist</h3>
+                            <p>Creativity</p>
+                            <p>Composition</p>
+                            <p>Digital</p>
+                        </div>
+                        <div class="backg">
+                            <p>Art has taught me to think creatively wether thats finding unique solution to things or to create something unique. My prefered medium of drawing is on a tablet
+                                which allows me to create me own designs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardgroup">
+                    <div class="cardS">
+                        <div class="frontg">
+                            <h3>Programming</h3>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Javascript</p>
+                        </div>
+                        <div class="backg">
+                            <p>
+                                I am able to code in HTML, CSS, and Javascript. I am actively learning and researching on this topic to increase my proficency in coding.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
