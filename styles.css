@@ -238,43 +238,128 @@ p {
 }
 /* ABOUT */
 /* INTEREST */
-.carousel {
-    margin: 100px auto;
-    width: 35%;
+
+.gaming{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.imgbody{
+    height: 70vh;
     display: flex;
     float: right;
-    overflow-x: auto;
-    margin-right: 10rem;
-    border: 3px solid #f4b301;
-}
-.carousel::-webkit-scrollbar{
-    display: none;
-}
-
-.group img{
-    height: 200px;
-    width: 20rem;
-}
-
-.group{
-    display: flex;
     align-items: center;
-    justify-content: center;
-    animation: spin 15s infinite linear;
+}
+.imgslider{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+    background-color: #2a2e34;
 }
 
-@keyframes spin {
-    from {translate: 0;}
-    to {translate: -100%;}
+.imgslider .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0.5% at 0 50%);
+}
+
+.imgslider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.imgslider .slide img{
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imgslider .slide .info{
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.imgslider .slide .info h2{
+    justify-content: left;
+    background: #1e2329;
+    color: #f5a402;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    width: fit-content;
+}
+
+.imgslider .slide .info p{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.imgslider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.imgslider .navigation .btn{
+    background: rgba(255,255,255,0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.imgslider .navigation .btn.active{
+    background: #f4b301;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 620px){
+    .imgslider{
+        width: 400px;
+        height: 250px;
+    }
+
+    .imgslider .slide .info{
+        padding: 10px 20px;
+    }
+
+    .imgslider .slide .info h2{
+        font-size: 30px;
+    }
+
+    .imgslider .slide .info p{
+        width:80%;
+        font-size: 13px;
+    }
     
-}
+    .imgslider .navigation{
+        bottom: 25px;
+    }
 
+    .imgslider .navigation .btn{
+        width: 8px;
+        height: 8px;
+        margin: 8px;
+    }
+}
 .gaming h1{
     justify-content: left;
     margin: 20px;
 }
-
-.art {
+.art{
     clear: both;
 }
 
@@ -336,10 +421,9 @@ p {
 }
 
 .icon img{
-    object-fit: contain;
     object-position: center;
-    max-width: 250px;
-    max-height: 300px;
+    max-width: 300px;
+    max-height: 200px;
     padding: 10px;
 }
 
@@ -391,7 +475,7 @@ p {
 /* PROJECTS */
 
 /* CONTACTS */
-.contact h1{
+.contact h2{
     font-size: 50px;
     display: flex;
     background-color: #f4b301;
@@ -430,16 +514,17 @@ p {
 }
 
 .cardCS{
+    border:3px solid #f4b301;
+    border-radius: 5px;
     position: relative;
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 .cardsCC{
-    border:3px solid #f4b301;
-    border-radius: 15px;
     position: relative;
-    transition: 2s ease-in-out;
+    width: 500px;
+    height: 300px;
 }
 
 .cardsCC:hover{
@@ -450,5 +535,16 @@ p {
 .cardsCC:hover a{
     transition: 0.5s ease;
     color: rgb(229, 255, 0);
+}
+
+.facebook, .email, .phonenumber{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #1e2329;
+    color: #f5a302;
+    font-size: 25px;
+    border: 3px solid #f4b301;
 }
 /* CONTACTS */
