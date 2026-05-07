@@ -192,16 +192,15 @@ p {
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
-
 }
 .slider-container ::-webkit-scrollbar{
     display: none;
 }
-
 .slider{
     display: flex;
-    aspect-ratio:  16/9;
+    aspect-ratio: 16/9;
     overflow-x: auto;
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75 hsla(0, 0%, 0%, 0.25);
@@ -229,9 +228,9 @@ p {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #ffffffff;
+    background-color: #fff;
     opacity: 0.75;
-    transition: opacity ease 250ms;
+    transition: ease 250ms;
 }
 
 .slider-nav a:hover{ 
@@ -239,8 +238,6 @@ p {
 }
 /* ABOUT */
 /* INTEREST */
-
-
 .carousel {
     margin: 100px auto;
     width: 35%;
@@ -272,37 +269,107 @@ p {
     
 }
 
+.gaming h1{
+    justify-content: left;
+    margin: 20px;
+}
+
 .art {
     clear: both;
 }
 
-.art p{
-    display: flex;
-    float: left;
-    max-width: 750px;
+.drawing{
+    width: 90%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
 
-.drawing img{   
-    display: block;
-    margin: 20px auto;
-    height: 350px;
-    width: auto;
+.drawingCards{
     border: 3px solid #f4b301;
-    justify-content: center;
-    align-items: center;
-    float: right;
 }
+
+.drawing img{
+    width: 100%;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.drawing img:hover{
+    transform: scale(0.8) scale(1.5);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px #1e2329;
+}
+
+.context{
+    display: flex;
+    background-color: #1e2329;
+    background-size: 30rem;
+}
+
+
+.art1 p{
+    font-size: 35px;
+    margin: 0;
+}
+
+.art1 h1{
+    font-size: 40px;
+    justify-content: left;
+}
+.art1{
+    padding: 30px;
+}
+
 .program{
     clear: both;
 }
 
+.experienceprog h1{
+    justify-content: left;
+    margin: 20px;
+}
+
+.experienceprog{
+    float: right;
+}
+
+.icon img{
+    object-fit: contain;
+    object-position: center;
+    max-width: 250px;
+    max-height: 300px;
+    padding: 10px;
+}
+
+.programimg{
+    border: 3px solid #f4b301;
+    display: flex;
+    height: 90%;
+    overflow: auto;
+}
+
+#web{
+    max-width: 45rem;
+    padding: 25px;
+}
 /* INTEREST */
 
 /* PROJECTS */
+
+.mapcreator p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #minecraft{
     display: flex;
     height: 500px;
     border: 3px solid #f4b301;
+    float: right;
+    margin: 20px;
 }
 
 .Pngmodel{
@@ -353,7 +420,7 @@ p {
     margin: 16px 0;
 }
 
-.cardcontact{
+.cardcontact-container{
     display: flex;
     grid-template-rows: repeat(3,1fr);
     justify-content: center;
@@ -362,12 +429,16 @@ p {
     padding: 3rem;
 }
 
+.cardCS{
+    position: relative;
+    width: 500px;
+    height: 250px;
+}
+
 .cardsCC{
     border:3px solid #f4b301;
     border-radius: 15px;
     position: relative;
-    width: 100%;
-    height: 100%;
     transition: 2s ease-in-out;
 }
 
