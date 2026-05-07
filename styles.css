@@ -98,7 +98,11 @@ p {
 }
 /* HOME */
 /* ABOUT */
-
+.me {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .me h1{
     display: flex;
     justify-content: left;
@@ -110,6 +114,17 @@ p {
     margin-left: 50px;
     font-size: 30px;
     max-width: 800px;
+}
+
+.resize img{
+    display: flex;
+    flex: 1 0 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.skills{
+    clear: both;
 }
 
 .skills p{
@@ -183,59 +198,6 @@ p {
     transform: rotateY(180deg);
 }
 
-.abcontainer{
-    float: right;
-    padding: 3rem;
-}
-
-.slider-container{
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-}
-.slider-container ::-webkit-scrollbar{
-    display: none;
-}
-.slider{
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75 hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-}
-
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-}
-
-.slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    object-position: 50% 50%;
-}
-
-.slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: ease 250ms;
-}
-
-.slider-nav a:hover{ 
-    opacity: 10;
-}
 /* ABOUT */
 /* INTEREST */
 
@@ -454,23 +416,48 @@ p {
     border: 3px solid #f4b301;
     float: right;
     margin: 20px;
+    transition: 2s ease;
+}
+
+#minecraft:hover{
+    transform: scale(1.1) translateX(-30px) translateY(-15px);
 }
 
 .Pngmodel{
     clear: both;
 }
+
 .pngtuber{
     display: flex;
     height: 400px;
     border: 3px solid #f4b301;
     justify-content: center;
 }
+
+.pngtuber img{
+    transition: 2s ease;
+}
+
+.pngtuber img:hover{
+    transform: scale(1.5)
+}
 #school{
     display: flex;
+    width: 800px;
     height: 500px;
     margin: 20px;
     border: 3px solid #f4b301;
     justify-content: right;
+    transition: 2s ease;
+}
+
+#school:hover{
+    transform: scale(1.1) translateX(30px);
+}
+
+.achievements p{
+    display: flex;
+    float: right;
 }
 /* PROJECTS */
 
